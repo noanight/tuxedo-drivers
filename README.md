@@ -4,7 +4,16 @@
 - <a href="#troubleshooting">Troubleshooting</a>
 
 # Description <a name="description"></a>
-Drivers for several platform devices for TUXEDO notebooks meant for the DKMS.
+
+Bought a SCHENKER MEDIA 15 (E23) Notebook using Ubuntu.
+Well, could not disable the annoying Keyboardbacklight. The Fans where noisy . An could not configure Powerprofiles.
+For Windows there are drivers and a Control-Center-Tool.
+
+Modified only one File (tuxedo_compatibility_check.c) changing the Vendor Strings.
+
+It works for my Notebook. Now i can control the Keyboardbacklight. The Fan is quiter and i can configure powerprofiles. The charing profile can altough be configured.
+
+Drivers for several platform devices for TUXEDO meant for the DKMS.
 
 ## Features
 - Driver for Fn-keys

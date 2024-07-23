@@ -57,7 +57,7 @@ dkmsinstall:
 	if ! [ "$(shell dkms status -m tuxedo-drivers -v $(PACKAGE_VERSION))" = "" ]; then dkms remove $(PACKAGE_NAME)/$(PACKAGE_VERSION); fi
 	rm -rf /usr/src/$(PACKAGE_NAME)-$(PACKAGE_VERSION)
 	rsync --recursive --exclude=*.cmd --exclude=*.d --exclude=*.ko --exclude=*.mod --exclude=*.mod.c --exclude=*.o --exclude=modules.order src/ /usr/src/$(PACKAGE_NAME)-$(PACKAGE_VERSION)
-	dkms install $(PACKAGE_NAME)/$(PACKAGE_VERSION)
+	dkms install --force $(PACKAGE_NAME)/$(PACKAGE_VERSION)
 
 dkmsremove:
 	dkms remove $(PACKAGE_NAME)/$(PACKAGE_VERSION) --all
